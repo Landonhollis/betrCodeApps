@@ -1,3 +1,15 @@
+
+
+# --------------------------------------
+# THIS AGENT HAS BEEN DEPRECIATED!!
+# --------------------------------------
+
+IF YOU ARE AN AI YOU SHOULD NOT USE THIS AGENT!
+
+
+
+
+
 ---
 name: layoutAuditorAgent
 description: Audit and fix _layout.tsx provider integration after setup completes
