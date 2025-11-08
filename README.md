@@ -15,20 +15,22 @@
       - global components: use the template in the srd's folder to create one file for each global component you want in the srd's folder. add any screen biases. 
       - simple screens: use the template to create one file for each screen that requires no more research than react native reusables and supabase. add any screen biases. 
       - complex screens: use the template to create one file per screen that requires more research and / or packages than just react native reusables and supabase. add any screen biases. 
-   ## setup
+   ## setup - Phaes 0
    SET UP AGENT
       - The setup agent is the first to run. it looks at the infrastucture items that are cheked off and impliments them. this insluced supabase, themeCore and stripe setup. 
-   ## coding
+   ## coding - Phase 1
    GLOBAL COMPONENTS
       - The global components should be coded first. run one instance of the global components coding agent for each of the global component srd's. 
-   SCREENS
+   SCREENS (COMPLEX AND SIMPLE)
       - After global components, code the rest of the screens using the complex screen coding agent and the simple screen coding agent.
       - These do not have to go in any certain order. 
       - each screen shuold get a fresh instance of its coding agent. 
    NEX
       - each screen coding agent stays in its own lane, it does not conjoin. that is the job of the nexAgent. 
       - the nex Agent takes all seperated screens, and conjoins them into a propper app by sorting them into the right files for navigation, making sure imports are accurate, checking that everything connects to geather propperly, and the the app flows as it should. 
-   ## styling
+   DATA AGREGATE
+      - The data agregate takes all the data that has been entered into the 2data.md prd from ths screen coding agents, makes sure that everything connects propperly and there are no conflicts in logic, makes sure there are propper rls policies, defualts, FK's and PK's, then migrates all data to supabase via the supabase mcp. 
+   ## styling - phase 2
    SETUP
       fontsAgent
          - This agent analyzes the app's aesthetic needs from global bias, theme descriptions, and SRDs
